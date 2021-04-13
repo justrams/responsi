@@ -5,25 +5,27 @@ using System.Text;
 using System.Threading.Task;
 
 
-namespace ResponsiPemrograman3375
-{
-	public class Responsi
-	{
-		public string Nama { get; set; }
-		public string Gaji { get; set; }
-		
-		public void Data()
-		{
-			Console.Writeline("Silahkan mengisi Nama dan Gaji :)");
-			Console.Writeline("Nama: {0}", Nama);
-			Console.Writeline("Gaji: {0}", Gaji);
-			Console.Writeline("------------------");
-		}
-		
-		public void KenaikanGaji
-		{
-			Console.Writeline("Gaji tambah 10%");
-		}
-	
-	}
-}
+class Karyawan
+    {
+        public int nik { get; set; }
+        public string nama { get; set; }
+        public int gajibulanan { get; set; }
+        public int kenaikan { get; set; }
+
+        public Karyawan(int nik, string nama, int gajibulanan)
+        {
+            this.nik = nik;
+            this.nama = nama;
+            if(gajibulanan < 0)
+            {
+                this.gajibulanan = 0;
+            }
+            else
+            {
+                this.gajibulanan = gajibulanan;
+            }
+            double tmp = 0;
+            tmp = 0.1 * gajibulanan;
+            kenaikan += Convert.ToInt32(tmp) + gajibulanan;
+        }    
+    }
