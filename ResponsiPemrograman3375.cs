@@ -22,7 +22,7 @@ namespace ResponsiPemrograman3375
 		
 		public void KenaikanGaji
 		{
-			
+			Console.Writeline("Gaji tambah 10%");
 		}
 	
 	}
